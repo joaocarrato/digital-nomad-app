@@ -6,9 +6,11 @@ const palette = {
   charcoalGrey: "#302E2D",
   stoneGrey: "#5C5C5C",
   pureWhite: "#FFFFFF",
+  transparent: "transparent",
 };
 const theme = createTheme({
   colors: {
+    ...palette,
     background: palette.midnightBlack,
     primary: palette.fieryRed,
     text: palette.pureWhite,
@@ -72,6 +74,10 @@ const theme = createTheme({
   },
   borderRadii: {
     default: 16,
+    rounded: 500,
+  },
+  boxShadows: {
+    primary: "3px 3px 10px 3px rgba(255, 75, 75, 0.4)",
   },
 });
 
