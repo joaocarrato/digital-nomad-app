@@ -5,13 +5,18 @@ import { Pill, PillProps } from "./Pill";
 
 type CategoryPillProps = {
   category: Category;
-} & Pick<PillProps, "active">;
+} & Pick<PillProps, "active" | "onPress">;
 
-export function CategoryPill({ category, ...pillProps }: CategoryPillProps) {
+export function CategoryPill({
+  category,
+  onPress,
+  ...pillProps
+}: CategoryPillProps) {
   return (
     <Pill
       iconName={categoryIconMap[category.code]}
       label={category.name}
+      onPress={onPress}
       {...pillProps}
     />
   );
